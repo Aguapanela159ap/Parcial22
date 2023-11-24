@@ -15,6 +15,19 @@ export class CursosComponent implements OnInit {
   cursos: Array<Curso> = [];
   cursosConCertificado: Array<number> = [];
 
+  cursoSleccionado:Curso = new Curso(99 , "jvnivn", "jdvnkjvn", 2828, 3838, true, "jkvenvk", "nksefnwels")
+
+  public setCursoSleccionado(id:number){
+    console.log("ffdfdf")
+    this.cursos.forEach(curso => {
+
+      if(curso.id == id){
+        this.cursoSleccionado = curso;
+      }
+      
+    });
+  }
+
   public getCursos() {
 
 
